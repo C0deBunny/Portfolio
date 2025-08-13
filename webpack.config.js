@@ -10,15 +10,24 @@ module.exports = {
 	},
 	mode: "development",
 	devServer: {
-		static: path.resolve(__dirname, "dist"),
+		static: false,
 		hot: true,
+		open: false,
+		watchFiles: ["src/**/*"],
+		liveReload: true,
 	},
 	module: {
-		rules: [{ test: /\.css$/i, use: ["style-loader", "css-loader"] }],
+		rules: [
+			{
+				test: /\.css$/i,
+				use: ["style-loader", "css-loader"],
+			},
+		],
 	},
 	plugins: [
 		new HtmlWebpackPlugin({
 			template: "./src/index.html",
+			cache: false,
 		}),
 	],
 }
