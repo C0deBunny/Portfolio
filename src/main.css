@@ -1,1 +1,123 @@
+@import "./reset.css";
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
+:root {
+	--black: #121f28;
+	--white: #fefdfd;
+	--red: #ff705a;
+	--grey: #aaaaaa;
+
+	--side: 10vw;
+}
+
+body {
+	background-color: var(--black);
+}
+
+/* ==== Header ==== */
+header {
+	height: 80px;
+}
+
+.header-content {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	max-width: 1400px;
+	margin: 0 auto;
+	padding: 0 1rem;
+	color: var(--white);
+}
+
+header h3 {
+	font-size: 1.8rem;
+	font-weight: 500;
+	font-family: "Nunito", sans-serif;
+}
+
+header ul {
+	display: flex;
+	gap: 1.5rem;
+}
+
+header li {
+	font-size: 1.2rem;
+	font-weight: 500;
+	color: var(--grey);
+	font-family: "Inter", sans-serif;
+}
+
+/* ==== Home ==== */
+.home {
+	height: 500px;
+}
+
+.home-content {
+	height: 100%;
+	display: grid;
+	grid-template-columns: 2fr 1fr;
+	max-width: 1400px;
+	margin: 0 auto;
+	padding: 0 1rem;
+}
+
+.greeting {
+	grid-column: 1/2;
+	align-self: center;
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+	font-family: "Nunito", sans-serif;
+	color: var(--white);
+}
+
+.greeting h2 {
+	font-size: 3rem;
+	font-weight: 600;
+}
+
+.greeting h2 span {
+	color: var(--red);
+}
+
+.greeting h3 {
+	font-size: 2rem;
+	font-weight: 400;
+	margin-left: 2.5rem;
+}
+
+.greeting h1 {
+	font-size: 3rem;
+	font-weight: 700;
+}
+
+.resume-button button {
+	margin-top: 40px;
+	padding: 0.8rem 0.8rem;
+	background-color: var(--red);
+	border: 0;
+	border-radius: 4px;
+	outline: 0;
+	font-family: "Nunito", sans-serif;
+	font-size: 1.2rem;
+	font-weight: 600;
+	color: var(--white);
+}
+
+.picture {
+	grid-column: 2/3;
+	align-self: center;
+}
+
+/* ==== About ==== */
+
+/* ==== Projects ==== */
+
+/* ==== Contact ==== */
+
+/* header,
+.home {
+	border: 1px solid green;
+} */

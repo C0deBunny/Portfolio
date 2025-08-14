@@ -1,2 +1,1 @@
-require("./reset.css")
-require("./main.css")
+import "./main.css"
