@@ -6,6 +6,7 @@
 	--white: #fefdfd;
 	--red: #ff705a;
 	--grey: #aaaaaa;
+	--shade: #16232c;
 
 	--side: 10vw;
 }
@@ -74,8 +75,8 @@ header li {
 }
 
 .greeting h2 {
-	font-size: 3rem;
-	font-weight: 600;
+	font-size: 2rem;
+	font-weight: 800;
 }
 
 .greeting h2 span {
@@ -90,7 +91,7 @@ header li {
 
 .greeting h1 {
 	font-size: 3rem;
-	font-weight: 700;
+	font-weight: 800;
 }
 
 .resume-button button {
@@ -111,6 +112,28 @@ header li {
 	align-self: center;
 }
 
+/* ==== Skill Stack ==== */
+.skill-stack {
+	background-color: color-mix(in srgb, var(--black) 98%, white);
+	padding: 1.6rem;
+}
+
+.skill-stack ul {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	max-width: 1400px;
+	margin: 0 auto;
+	padding: 0 1rem;
+}
+
+.skill-stack li {
+	font-family: "Nunito", sans-serif;
+	font-size: 1.2rem;
+	font-weight: 800;
+	color: color-mix(in srgb, var(--black) 80%, white);
+}
+
 /* ==== About ==== */
 
 /* ==== Projects ==== */
@@ -118,6 +141,7 @@ header li {
 /* ==== Contact ==== */
 
 /* header,
-.home {
+.home,
+.skill-stack {
 	border: 1px solid green;
 } */
