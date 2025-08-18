@@ -208,6 +208,71 @@ header a {
 }
 
 /* ==== Projects ==== */
+#projects {
+	display: grid;
+	grid-template-rows: 80px 1fr;
+	max-width: 1400px;
+	margin: 0 auto;
+	padding: 5vh 1rem;
+}
+
+#projects h1 {
+	justify-self: center;
+	font-family: "Nunito", sans-serif;
+	font-size: clamp(1.6rem, 1.1rem + 1.2vw, 3rem);
+	font-weight: 600;
+	margin-bottom: 1rem;
+	color: var(--white);
+}
+
+.project-container {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+	gap: clamp(16px, 2.5vw, 32px);
+}
+
+.project {
+	display: flex;
+	flex-direction: column;
+	padding: 16px 18px;
+	min-height: 340px;
+	border-radius: 12px;
+	border: 2px solid var(--red);
+}
+
+.project h2 {
+	font-family: "Nunito";
+	font-size: 2rem;
+	font-weight: 800;
+	text-align: center;
+	color: var(--white);
+}
+
+.project img {
+}
+
+.project p {
+	font-family: "Nunito";
+	font-size: clamp(1rem, 0.95rem + 0.3vw, 1.25rem);
+	font-weight: 800;
+	line-height: 1.1;
+	letter-spacing: 0.01em;
+	margin-bottom: 0.5rem;
+	text-align: left;
+}
+
+.project .button-container {
+	display: flex;
+	justify-content: space-evenly;
+}
+
+.project .button-container button {
+	padding: 0.5rem 1rem;
+	color: var(--white);
+	background-color: var(--red);
+	border: none;
+	border-radius: 5px;
+}
 
 /* ==== Contact ==== */
 
