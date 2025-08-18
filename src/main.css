@@ -160,21 +160,50 @@ header a {
 #about {
 	display: grid;
 	grid-template-columns: 1fr 2fr;
-	align-items: center;
-	gap: 2rem;
+	align-items: start;
 	max-width: 1400px;
 	margin: 0 auto;
 	padding: 0 1rem;
+	padding-top: 10vh;
+	gap: clamp(1.5rem, 3vw, 3rem);
+}
+
+#about .image {
+	grid-column: 1/2;
+}
+
+#about .text-content {
+	grid-column: 2/3;
+	display: flex;
+	flex-direction: column;
 }
 
 #about h1 {
 	font-family: "Nunito", sans-serif;
-	font-size: 1.6rem;
+	font-size: clamp(1.6rem, 1.1rem + 1.2vw, 3rem);
+	font-weight: 600;
+	margin-bottom: 1.5rem;
 	color: var(--white);
 }
+
+#about h2 {
+	font-family: "Nunito", sans-serif;
+	font-size: 1.2em;
+	line-height: 1.6;
+	opacity: 0.95;
+	font-weight: 500;
+	margin-bottom: 1rem;
+	color: var(--white);
+}
+
 #about p {
 	font-family: "Nunito", sans-serif;
-	font-size: 1.2rem;
+	font-size: clamp(1rem, 0.95rem + 0.3vw, 1.25rem);
+	max-width: 65ch;
+	line-height: 1.7;
+	letter-spacing: 0.01em;
+	margin-bottom: 0.5rem;
+	text-align: left;
 	color: var(--white);
 }
 
