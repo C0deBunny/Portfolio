@@ -1,0 +1,37 @@
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+build/
+
+# Local env files
+.env
+.env.local
+.env.*.local
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Cache
+.cache/
+node_modules/.cache/
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Editor-specific files
+.vscode/
+.idea/
+
+# gh-pages deployment cache
+node_modules/.cache/gh-pages/
+
+# Optional: lock files (if you want to avoid committing them)
+# package-lock.json
+# yarn.lock
+# pnpm-lock.yaml
