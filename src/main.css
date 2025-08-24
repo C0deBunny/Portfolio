@@ -1,4 +1,5 @@
 @import "./reset.css";
+@import "./animations.css";
 @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
 :root {
@@ -227,31 +228,47 @@ header a {
 
 .project-container {
 	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+	grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
 	gap: clamp(16px, 2.5vw, 32px);
 }
 
-.project {
+.project-card {
+	height: 100%;
 	display: flex;
-	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 1rem;
 	padding: 16px 18px;
-	min-height: 340px;
 	border-radius: 12px;
-	border: 2px solid var(--red);
+	border: 1px solid var(--white);
+	overflow: hidden;
 }
 
-.project h2 {
+.left-card,
+.right-card {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.project-card h2 {
 	font-family: "Nunito";
 	font-size: 2rem;
 	font-weight: 800;
 	text-align: center;
 	color: var(--white);
+	margin-bottom: 1rem;
 }
 
-.project img {
+.project-card img {
+	height: 200px;
+	width: 200px;
+	object-fit: cover;
+	display: block;
 }
 
-.project p {
+.project-card p {
 	font-family: "Nunito";
 	font-size: clamp(1rem, 0.95rem + 0.3vw, 1.25rem);
 	font-weight: 800;
@@ -259,19 +276,30 @@ header a {
 	letter-spacing: 0.01em;
 	margin-bottom: 0.5rem;
 	text-align: left;
+	color: var(--grey);
 }
 
-.project .button-container {
+.project-card .button-container {
+	width: 100%;
 	display: flex;
-	justify-content: space-evenly;
+	justify-content: start;
+	gap: 1rem;
 }
 
-.project .button-container button {
+.project-card .button-container button {
 	padding: 0.5rem 1rem;
 	color: var(--white);
 	background-color: var(--red);
 	border: none;
 	border-radius: 5px;
+
+	transition: scale 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card .button-container button:hover {
+	transform: scale(1.1);
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+	cursor: pointer;
 }
 
 /* ==== Contact ==== */

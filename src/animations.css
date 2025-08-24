@@ -1,0 +1,51 @@
+.fade.Y {
+	opacity: 0;
+	transform: translateY(50px);
+	transition: all 0.8s ease-out;
+}
+
+.fade.Y.show {
+	opacity: 1;
+	transform: translateY(0);
+}
+
+.fade.X {
+	opacity: 0;
+	transform: translateX(-50px);
+	transition: all 0.8s ease-out;
+}
+
+.fade.X.show {
+	opacity: 1;
+	transform: translateX(0);
+}
+
+.greeting h1 {
+	white-space: nowrap;
+	overflow: hidden;
+	width: 0;
+	animation: typing 2s steps(var(--n)) forwards;
+	position: relative;
+}
+
+.greeting h1::after {
+	content: "";
+	position: absolute;
+	top: 0;
+	height: 100%;
+	width: 2px;
+	background: var(--red);
+	animation: caret-blink 1s step-end infinite;
+}
+
+@keyframes caret-blink {
+	50% {
+		opacity: 0;
+	}
+}
+
+@keyframes typing {
+	to {
+		width: calc(var(--n) * 1ch);
+	}
+}

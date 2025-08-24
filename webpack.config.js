@@ -7,6 +7,7 @@ module.exports = {
 		filename: "main.js",
 		path: path.resolve(__dirname, "dist"),
 		clean: true,
+		assetModuleFilename: "assets/[name][ext]",
 	},
 	mode: "development",
 	devServer: {
@@ -24,7 +25,7 @@ module.exports = {
 			},
 			{
 				test: /\.html$/i,
-				use: ["html-loader"],
+				use: "html-loader",
 			},
 			{
 				test: /\.(png|svg|jpg|jpeg|gif)$/i,
