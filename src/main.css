@@ -303,9 +303,51 @@ header a {
 }
 
 /* ==== Contact ==== */
+#contact {
+	display: grid;
+	grid-template-rows: 100px 1fr;
+	max-width: 1400px;
+	margin: 0 auto;
+	padding: 5vh 1rem;
+}
 
-/* header,
-.home,
-.skill-stack {
-	border: 1px solid green;
-} */
+#contact h1 {
+	justify-self: center;
+	font-family: "Nunito", sans-serif;
+	font-size: clamp(1.6rem, 1.1rem + 1.2vw, 3rem);
+	font-weight: 600;
+	margin-bottom: 0.5rem;
+	color: var(--white);
+}
+
+#contact h2 {
+	justify-self: center;
+	font-family: "Nunito", sans-serif;
+	font-size: clamp(1rem, 1.1rem + 1.2vw, 1.5rem);
+	font-weight: 400;
+	color: var(--white);
+}
+
+.contact-content {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+}
+
+.contact-content img {
+	justify-self: flex-end;
+	margin-right: 50px;
+}
+
+.contact-content ul {
+	margin-top: 10%;
+}
+
+.contact-content a {
+	text-decoration: none;
+	color: inherit;
+}
+
+.contact-content svg {
+	height: 80px;
+	width: 80px;
+}
