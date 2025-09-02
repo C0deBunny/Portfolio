@@ -114,7 +114,7 @@ header a {
 	font-weight: 800;
 }
 
-.resume-button button {
+.resume-button {
 	margin-top: 40px;
 	padding: 0.8rem 0.8rem;
 	background-color: var(--red);
@@ -125,6 +125,14 @@ header a {
 	font-size: 1.2rem;
 	font-weight: 600;
 	color: var(--white);
+	cursor: pointer;
+	transition: all 0.3s ease;
+}
+
+.resume-button:hover {
+	filter: brightness(90%) saturate(110%);
+	transform: translateY(-3px);
+	box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
 .picture {
@@ -344,6 +352,18 @@ header a {
 	font-size: clamp(1rem, 1.1rem + 1.2vw, 1.5rem);
 	font-weight: 400;
 	color: var(--white);
+	fill: var(--white);
+	transition: all 0.3s ease;
+}
+
+.contact-content li {
+	width: fit-content;
+}
+
+.contact-content li > a:hover {
+	filter: brightness(90%) saturate(110%);
+	transform: translateX(5px);
+	fill: var(--red);
 }
 
 .contact-content a {
@@ -351,11 +371,12 @@ header a {
 	align-items: center;
 	gap: 1rem;
 	text-decoration: none;
+	transition: all 0.3s ease;
 	color: inherit;
 }
 
 .contact-content svg {
 	height: 60px;
 	width: 60px;
-	fill: var(--white);
+	fill: inherit;
 }

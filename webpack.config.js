@@ -1,5 +1,6 @@
 const path = require("path")
 const HtmlWebpackPlugin = require("html-webpack-plugin")
+const CopyWebpackPlugin = require("copy-webpack-plugin")
 
 module.exports = {
 	entry: "./src/index.js",
@@ -11,7 +12,7 @@ module.exports = {
 	},
 	mode: "development",
 	devServer: {
-		static: false,
+		static: [{ directory: path.resolve(__dirname, "public") }, { directory: path.resolve(__dirname, "dist") }],
 		hot: true,
 		open: false,
 		watchFiles: ["src/**/*"],
@@ -41,6 +42,9 @@ module.exports = {
 		new HtmlWebpackPlugin({
 			template: "./src/index.html",
 			cache: false,
+		}),
+		new CopyWebpackPlugin({
+			patterns: [{ from: "public", to: "." }],
 		}),
 	],
 }
